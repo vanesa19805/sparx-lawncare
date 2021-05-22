@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 function SignupForm() {
   return (
@@ -24,8 +26,6 @@ function SignupForm() {
             id="lastName"
           />
         </div>
-
-
         <section className="mb-3">
           <label for="signupEmail" className="form-label">Email address</label>
           <input type="email" className="form-control" id="signupEmail" aria-describedby="useremail2" />
@@ -50,10 +50,9 @@ function SignupForm() {
         </div>
         <button id="signup" className="btn btn-dark localBtn">Submit</button>
         <section className="m-3 justify-content-end text-end">
-          <label for="loginInstead" className="form-label">Already a member please login?</label>
+          <label for="loginInstead" className="form-label">Already a member please login!</label>
           <Link id="loginInstead" to="/login" className="btn btn-light localBtn">Login</Link>
         </section>
-
       </form>
     </>
   );
