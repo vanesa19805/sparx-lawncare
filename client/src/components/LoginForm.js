@@ -1,91 +1,39 @@
-import React, { useState } from 'react';
-import Auth from '../utils/auth';
-import { Form, Button, Alert } from 'react-bootstrap';
-import { LOGIN_USER } from '../utils/mutations';
-import { useMutation } from '@apollo/react-hooks';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
-const LoginForm = () => {
-    const [login, {error} ] = useMutation(LOGIN_USER);
-    const [userFormData, setUserFormData] = useState({ email: '', password: '' });
-    const [validated] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
-
-    const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setUserFormData({
-            ...userFormData,
-            [name]: value
-        });
-    };
-
-    const handleFormSubmit = async event => {
-        event.preventDefault();
-
-        // check if form has everything (as per react-bootstrap docs)
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-
-        try {
-            const { data } = await login({
-                variables: {...userFormData}
-            });
-            Auth.login(data.login.token);
-        } catch (e) {
-            console.error(e);
-            setShowAlert(true);
-        }
-
-        setUserFormData({
-            username: '',
-            email: '',
-            password: '',
-        });
-    };
-
+function LoginForm() {
     return (
         <>
-            <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
-                <Alert dismissible onClose={() => setShowAlert(false)} show={showAlert} variant='danger'>
-                    Something went wrong with your login credentials!
-                </Alert>
-                <Form.Group>
-                    <Form.Label htmlFor='email'>Email</Form.Label>
-                    <Form.Control
-                        type='text'
-                        placeholder='Your email'
-                        name='email'
-                        onChange={handleInputChange}
-                        value={userFormData.email}
-                        required
+            <form className="m-3">
+                <h2>LOGIN</h2>
+                <section className="mb-3">
+                    <label for="user-email" className="form-label">Email address:</label>
+                    <input
+                        placeholder="youremail@test.com"
+                        name="email"
+                        type="email"
+                        id="email"
                     />
-                    <Form.Control.Feedback type='invalid'>Email is required!</Form.Control.Feedback>
-                </Form.Group>
-
-                <Form.Group>
-                    <Form.Label htmlFor='password'>Password</Form.Label>
-                    <Form.Control
-                        type='password'
-                        placeholder='Your password'
-                        name='password'
-                        onChange={handleInputChange}
-                        value={userFormData.password}
-                        required
+                </section>
+                <section className="mb-3">
+                    <label for="user-password" className="form-label">Password</label>
+                    <input
+                        placeholder="password"
+                        name="password"
+                        type="password"
+                        id="pwd"
                     />
-                    <Form.Control.Feedback type='invalid'>Password is required!</Form.Control.Feedback>
-                </Form.Group>
-                <Button
-                    disabled={!(userFormData.email && userFormData.password)}
-                    type='submit'
-                    variant='success'>
-                    Submit
-                </Button>
-                {error && <div>Login failed</div>}
-            </Form>
+                </section>
+                <button id="login" className="btn btn-dark localBtn">Login</button>
+                <section className="m-3 justify-content-end text-end">
+                    <label for="signupInstead" className="form-label">Not A Member Yet! Please Sighup!</label>
+                    <Link id="signupInstead" to="/signup" class="btn btn-light localBtn">Signup</Link>
+                </section>
+            </form>
         </>
-    );
-};
+    )
+}
 
-export default LoginForm;
+export default LoginForm
