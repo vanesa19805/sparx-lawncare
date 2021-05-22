@@ -16,6 +16,7 @@ function NavLinks(props) {
         </Navbar.Collapse>
       </Navbar>
     </div>
+    
   );
 }
 
