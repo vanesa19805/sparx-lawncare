@@ -6,6 +6,7 @@ import SignupForm from "./components/SignupForm";
 import "./App.css";
 import Header from './components/Header';
 import NavLinks from './components/Nav';
+import About from './components/About';
 
 class App extends Component {
 
