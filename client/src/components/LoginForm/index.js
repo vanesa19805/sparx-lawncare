@@ -10,15 +10,18 @@ function LoginForm() {
                 <h2>LOGIN</h2>
                 <section className="mb-3">
                     <label for="user-email" className="form-label">Email address:</label>
+                <br></br>
                     <input
                         placeholder="youremail@test.com"
                         name="email"
                         type="email"
                         id="email"
                     />
+                
                 </section>
                 <section className="mb-3">
                     <label for="user-password" className="form-label">Password</label>
+                    <br></br>
                     <input
                         placeholder="password"
                         name="password"
