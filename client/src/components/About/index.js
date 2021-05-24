@@ -3,14 +3,12 @@ import Card from "react-bootstrap/Card";
 
 function About(props) {
   return (
-    <div>
+    <div className="col-8 mx-auto pt-5">
       <Card>
         <Card.Header>About Us</Card.Header>
-        <Card.Body>          
-          <Card.Text>
+        <Card.Body>
             Sparx lawncare service is here to provide you with expert assistance. We specialize in lawn maintence, tree removal, and snow removal.
             Schedule your service online or give us a call more info. 
-          </Card.Text>          
         </Card.Body>
       </Card>
     </div>

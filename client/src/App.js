@@ -18,6 +18,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <NavLinks />
+          <About />
         </div>
         <div>
           <Switch>
