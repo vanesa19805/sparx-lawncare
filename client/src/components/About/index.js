@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 function About(props) {
   return (
-    <div>
+    <div className="col-8 mx-auto p-5">
       
       <Card>
         <Card.Header>About Us</Card.Header>
