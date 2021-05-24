@@ -2,7 +2,7 @@ import React from "react";
 import Nav from "react-bootstrap/Nav";
 
 
-function Rates(props) {
+function Calendar(props) {
   return (
     <div>
       
@@ -11,4 +11,4 @@ function Rates(props) {
   );
 }
 
-export default Rates;
+export default Calendar;
