@@ -5,8 +5,6 @@ const session = require('express-session');
 const passport = require('passport');
 const path= require("path") 
 
-
-
 app.use(express.urlencoded({extented: true}))
 app.use(express.json())
 
