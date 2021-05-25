@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900);
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
 .heading {
     background: 
@@ -9,14 +9,16 @@
     padding: 50px;
     background-image: url("../../assets/headerBackground.jpg");
     background-size: cover;  
- 
-  
-
+    text-shadow:
+        0.07em 0 black,
+        0 0.07em black,
+        -0.07em 0 black,
+        0 -0.07em black;
 }
 h1 {
-    font-size: 200px;
-    font-weight: bolder;
-    color: white;
+    color: white;    
+    font-family: 'Racing Sans One', cursive;  
+    font-size: 100px;      
 }
 
 p {
