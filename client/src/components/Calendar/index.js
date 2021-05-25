@@ -1,11 +1,19 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
+import Calendar from 'react-calendar'
 
 
 function Calendar(props) {
+
+    const[vale, onChange] = useState(new Date());
+
   return (
     <div>
-      
+
+      <Calendar 
+      onChange={onChange}
+      value={value}
+      />
+
     </div>
     
   );
