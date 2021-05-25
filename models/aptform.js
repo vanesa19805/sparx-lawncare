@@ -21,6 +21,10 @@ const aptformSchema = new Schema({
     type: Number,
     required: true
   },
+  day:{
+    type: Date,
+    default: new Date().setDate(new Date().getDate())
+  },
   note:{
       type: String,
       trim: true
