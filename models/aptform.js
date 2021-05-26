@@ -32,6 +32,6 @@ const aptformSchema = new Schema({
 
 });
 
-const Aptform = mongoose.model("aptform", aptformSchema);
+const Aptform = mongoose.model("Aptform", aptformSchema);
 
 module.exports = Aptform;

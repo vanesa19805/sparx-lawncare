@@ -31,7 +31,7 @@ app.use(session({
        })
   }
 // this allowes you to activate the port
-  require("./config//connection")
+  require("./config/connection")
   app.listen(port,function(){
       console.log("app is listening on port", port)
   } )

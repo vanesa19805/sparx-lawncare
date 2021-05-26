@@ -1,15 +1,15 @@
 const router = require ("express").Router();
-const mongojs =require("mongojs");
+// const mongojs =require("mongoose");
 const path =require("path");
 
 
-const Aptform = require("../model/aptform.js");
+const db = require("../../models");
 
 
 // how do i structure this?
 
 router.post("/api/aptform", ({ body }, res) => {
-    Aptform.create(body)
+  db.Aptform.create(body)
       .then(dbAptform => {
         res.json(dbAptform);
       })
@@ -44,6 +44,6 @@ router.post("/api/aptform", ({ body }, res) => {
 
 
 
-
-modeule.exports = router;
+  
+module.exports = router;
 

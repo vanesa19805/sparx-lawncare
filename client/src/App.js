@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "./components/LoginForm";
-import SignupForm from "./components/SignupForm";
+import SignupForm from "./pages/Signup";
 import "./App.css";
 import Header from './components/Header';
 import NavLinks from './components/Nav';
@@ -23,7 +23,7 @@ class App extends Component {
         <div>
           <Switch>
             <Route exact path="/" component={LoginForm} />
-            <Route exact path="/search" component={SignupForm} />
+            <Route exact path="/signup" component={SignupForm} />
           </Switch>
           <Footer />
         </div>
