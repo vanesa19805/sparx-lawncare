@@ -1,6 +1,6 @@
 const router= require("express").Router()
 const { model } = require("../models/User")
-const apiRoutes= require("./api")
+const apiRoutes= require("./api/apt")
 const authRoutes= require("./auth")
 
 
@@ -8,4 +8,4 @@ const authRoutes= require("./auth")
 router.use("/auth",authRoutes)
 
 
-module.exports=router
+module.exports = router

@@ -1,31 +1,36 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useMutation } from '@apollo/react-hooks';
-import Auth from "../utils/auth";
-import { ADD_USER } from "../utils/mutations";
+import Api from "../utils/API";
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
-  const [addUser] = useMutation(ADD_USER);
+   const [firstName, setFirstName]  = useState('');
+   const [lastName, setLastName]  = useState('');
+   const [email, setEmail]  = useState('');
+   const [password, setPasword]  = useState('');
 
   const handleFormSubmit = async event => {
     event.preventDefault();
-    const mutationResponse = await addUser({
-      variables: {
-        email: formState.email, password: formState.password,
-        firstName: formState.firstName, lastName: formState.lastName
-      }
-    });
-    const token = mutationResponse.data.addUser.token;
-    Auth.login(token);
+
+    const obj = {
+      first:firstName,
+      last:lastName,
+      email: email,
+      pass: password
+    }
+    Api.createUser(obj);
   };
 
   const handleChange = event => {
     const { name, value } = event.target;
-    setFormState({
-      ...formState,
-      [name]: value
-    });
+    if (name === 'firstName'){
+      setFirstName(value);
+    }else if (name === 'lastName'){
+      setLastName(value);
+    }else if (name === 'email'){
+      setEmail(value);
+    }else if (name === 'password'){
+      setPasword(value);
+    }
   };
 
   return (
@@ -58,6 +63,7 @@ function Signup(props) {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
+          <br></br>
           <input
             placeholder="youremail@test.com"
             name="email"
@@ -68,6 +74,7 @@ function Signup(props) {
         </div>
         <div className="flex-row space-between my-2">
           <label htmlFor="pwd">Password:</label>
+          <br></br>
           <input
             placeholder="******"
             name="password"

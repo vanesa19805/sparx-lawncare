@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+// import Api from "../utils/API";
 
 function LoginForm() {
     return (
@@ -15,6 +15,7 @@ function LoginForm() {
                         name="email"
                         type="email"
                         id="email"
+                    
                     />
                 
                 </section>

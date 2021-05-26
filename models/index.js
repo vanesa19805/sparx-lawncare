@@ -1,4 +1,4 @@
 module.exports= {
     User: require("./User"),
-    service
+    AptForm: require("./aptform")
 }
