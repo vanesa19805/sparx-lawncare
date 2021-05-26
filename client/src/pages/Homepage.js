@@ -5,7 +5,8 @@ import HomePage from '../components/HomePage';
 
 function HomePage() {
     return (
-  
+  <>
+  </>
     )
 }
 export default HomePage;

@@ -13,7 +13,7 @@ const serviceaddressSchema = new Schema({
     trim: true,
     required: true
   },
-  State: {
+  state: {
     type: String,
   },
   zipcode:{
@@ -26,3 +26,4 @@ const serviceaddressSchema = new Schema({
 const Serviceaddress = mongoose.model("serviceaddress", serviceaddressSchema);
 
 module.exports = Serviceaddress;
+

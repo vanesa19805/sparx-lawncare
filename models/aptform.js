@@ -13,7 +13,7 @@ const aptformSchema = new Schema({
     trim: true,
     required: true
   },
-  Service: {
+  service: {
     type: String,
     trim: true
   },
