@@ -12,6 +12,10 @@ const sparxSeed = [
     category: "Snow Removal",
     services: "Salting surfaces, Shovaling walkways, Commercial plowing, Residentila plowing, Ice removal", 
   },
+  {
+    category: "Hardscaping",
+    services: "Paveing, Brickwork, Outdoor Firepit, Walkways, Rock designs", 
+  },
  
 ];
 
