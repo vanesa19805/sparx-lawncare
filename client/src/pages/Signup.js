@@ -1,35 +1,39 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Api from "../utils/API";
 
 function Signup(props) {
-   const [firstName, setFirstName]  = useState('');
-   const [lastName, setLastName]  = useState('');
+   const [username, setUserName]  = useState('');
+   const [name, setName]  = useState('');
    const [email, setEmail]  = useState('');
-   const [password, setPasword]  = useState('');
+   const [password, setPassword]  = useState('');
+   const history = useHistory();
 
   const handleFormSubmit = async event => {
     event.preventDefault();
 
     const obj = {
-      first:firstName,
-      last:lastName,
+      username: username,
+      name: name,
       email: email,
-      pass: password
+      password: password
     }
-    Api.createUser(obj);
+    Api.createUser(obj)
+    .then(() => {
+      history.push('/');
+    })
   };
 
   const handleChange = event => {
     const { name, value } = event.target;
-    if (name === 'firstName'){
-      setFirstName(value);
-    }else if (name === 'lastName'){
-      setLastName(value);
+    if (name === 'username'){
+      setUserName(value);
+    }else if (name === 'name'){
+      setName(value);
     }else if (name === 'email'){
       setEmail(value);
     }else if (name === 'password'){
-      setPasword(value);
+      setPassword(value);
     }
   };
 
@@ -42,27 +46,27 @@ function Signup(props) {
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
-          <label htmlFor="firstName">First Name:</label>
+          <label htmlFor="username">User Name: </label>
           <input
-            placeholder="First"
-            name="firstName"
-            type="firstName"
-            id="firstName"
+            placeholder="Username"
+            name="username"
+            type="username"
+            id="username"
             onChange={handleChange}
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="lastName">Last Name:</label>
+          <label htmlFor="name">Name: </label>
           <input
-            placeholder="Last"
-            name="lastName"
-            type="lastName"
-            id="lastName"
+            placeholder="Name"
+            name="name"
+            type="name"
+            id="name"
             onChange={handleChange}
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">Email: </label>
           <br></br>
           <input
             placeholder="youremail@test.com"
@@ -73,7 +77,7 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row space-between my-2">
-          <label htmlFor="pwd">Password:</label>
+          <label htmlFor="pwd">Password: </label>
           <br></br>
           <input
             placeholder="******"

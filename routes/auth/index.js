@@ -36,9 +36,9 @@ passport.serializeUser(function(user, done) {
 // Register User
 router.post('/register', function(req, res){
     var password = req.body.password;
-    var password2 = req.body.password2;
+    // var password2 = req.body.password2;
   
-    if (password == password2){
+    // if (password == password2){
       var newUser = new User({
         name: req.body.name,
         email: req.body.email,
@@ -48,17 +48,19 @@ router.post('/register', function(req, res){
   
       User.createUser(newUser, function(err, user){
         if(err) throw err;
+        console.log(user);
         res.send(user).end()
       });
-    } else{
-      res.status(500).send("{errors: \"Passwords don't match\"}").end()
-    }
+    // } else{
+    //   res.status(500).send("{errors: \"Passwords don't match\"}").end()
+    // }
   });
   
   // Endpoint to login
 router.post('/login',
 passport.authenticate('local'),
 function(req, res) {
+  console.log('login successful');
   res.send(req.user);
 }
 );
