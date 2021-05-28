@@ -1,12 +1,17 @@
-// const axios = require('axios');
+const axios = require('axios');
 
 
-// module.exports ={
+const API ={
 
-//     createUser: (userObj) => {
-//         //axios.post("/api/createUser", userObj)
-//         console.log(userObj)
-//     },
+    createUser: async (userObj) => {
+        return await axios.post("/auth/register", userObj)
+        
+    },
 
-// }
-//   export default API
+    loginUser: async (userObj) => {
+        return await axios.post("/auth/login", userObj)
+        
+    },
+
+}
+  export default API
