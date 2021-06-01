@@ -6,6 +6,9 @@ const passport= require("passport")
 
 passport.use(new LocalStrategy(
   function(username, password, done) {
+
+console.log('YOOO')
+
     User.getUserByUsername(username, function(err, user){
       if(err) throw err;
       if(!user){
@@ -14,8 +17,10 @@ passport.use(new LocalStrategy(
       User.comparePassword(password, user.password, function(err, isMatch){
         if(err) throw err;
      	if(isMatch){
+
      	  return done(null, user);
      	} else {
+        
      	  return done(null, false, {message: 'Invalid password'});
      	}
      });
@@ -57,9 +62,7 @@ router.post('/register', function(req, res){
   });
   
   // Endpoint to login
-router.post('/login',
-passport.authenticate('local'),
-function(req, res) {
+router.post('/login',passport.authenticate('local'),function(req, res) {
   console.log('login successful');
   res.send(req.user);
 }

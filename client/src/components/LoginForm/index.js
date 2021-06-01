@@ -14,9 +14,10 @@ function LoginForm() {
       username: username,
       password: password,
     };
+    console.log(obj)
     Api.loginUser(obj).then((res) => {
         console.log(res);
-      history.push("/signup");
+      history.push("/user-home");
     });
   };
 
