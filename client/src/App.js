@@ -8,6 +8,7 @@ import Header from './components/Header';
 import NavLinks from './components/Nav';
 import About from './components/About';
 import Footer from './components/Footer';
+import Homepage from './pages/Homepage';
 
 class App extends Component {
 
@@ -24,6 +25,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={LoginForm} />
             <Route exact path="/signup" component={SignupForm} />
+            <Route exact path="/user-home" component={Homepage} />
+            <Route exact path="/servicepage" component={Services} />
           </Switch>
           <Footer />
         </div>
