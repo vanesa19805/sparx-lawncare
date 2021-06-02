@@ -58,6 +58,7 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
+        
         <div className="flex-row space-between my-2">
           <label htmlFor="name">Name: </label>
           <br></br>
@@ -97,9 +98,23 @@ function Signup(props) {
           </button>
         </div>
       </form>
+
+      <br>
+      </br>
+      <br>
+      </br>
+      <br>
+      </br>
+      <br>
+      </br>
+      <br>
+      </br>
+
       </Card.Body>
       </Card>
+
     </div>
+    
   );
 
 }
