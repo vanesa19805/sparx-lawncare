@@ -1,36 +1,52 @@
 import React from "react";
-import Nav from "react-bootstrap/Nav";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
+import ListGroupItem from "react-bootstrap/ListGroupItem";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 function Contact(props) {
   return (
     <div>
-      <Card>
-        <Card.Header>Contact Us</Card.Header>
-        <Card.Body>
-          To reach out to us about a job or an issue, please email us at
-          sparxlanwncare@gmail.com or call us at 1-800-sparx-lwn.
-        </Card.Body>
-      </Card>
+      <div className="col-10 mx-auto p-5">
+        <Card>
+          <Card.Header className="text-center">Contact Us</Card.Header>
+          <Card.Body className="text-center">
+            To reach out to us about a job or an issue, please email us at
+            sparxlanwncare@gmail.com or call us at 1-800-sparx-lwn.
+          </Card.Body>
+        </Card>
+      </div>
+      <div className="col-10 mx-auto p-5">
+        <Card>
+          <Card.Header className="text-center">Send us a message</Card.Header>
+          <Form className="p-3">
+            <Row className="mb-3">
+            <Form.Label>Name</Form.Label>
+              <Col>
+                <Form.Control placeholder="First name" />
+              </Col>
+              <Col>
+                <Form.Control placeholder="Last name" />
+              </Col>
+            </Row>
+            <Form.Group className="mb-3" controlId="formGroupEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Questions/Comments</Form.Label>
+    <Form.Control as="textarea" rows={3} placeholder="Enter Questions or Comments"/>
+  </Form.Group>
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
 
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
-        </ListGroup>
-        <Card.Body>
-          <Card.Link href="#">Card Link</Card.Link>
-          <Card.Link href="#">Another Link</Card.Link>
-        </Card.Body>
-      </Card>
+          </Form>
+        </Card>
+      </div>
     </div>
   );
 }

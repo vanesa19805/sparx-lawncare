@@ -8,10 +8,11 @@ function NavLinks(props) {
       <Navbar bg="light" expand="lg">        
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#services">Services</Nav.Link>            
-            <Nav.Link href="#contact">Contact</Nav.Link> 
+          <Nav className="mr-auto ps-4">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/servicepage">Services</Nav.Link>            
+            <Nav.Link href="/contact">Contact</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link> 
           </Nav>          
         </Navbar.Collapse>
       </Navbar>
