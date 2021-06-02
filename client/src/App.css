@@ -26,13 +26,14 @@
 
 .App-footer {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
+  max-height: 10vh;
+  display: relative;
   position: relative;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: blue;
+  color: rgb(10, 109, 27);
 }
 
 .App-link {
