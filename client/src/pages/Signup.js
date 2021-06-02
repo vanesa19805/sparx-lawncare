@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import Api from "../utils/API";
+import Card from "react-bootstrap/Card";
 
 function Signup(props) {
    const [username, setUserName]  = useState('');
@@ -38,12 +39,13 @@ function Signup(props) {
   };
 
   return (
-    <div className="container my-1">
+    <div className="col-6 mx-auto p-5">
       <Link to="/login">
         ← Go to Login
       </Link>
-
-      <h2>Signup</h2>
+    <Card className="mt-3">
+      <Card.Header><h3 className="text-center">SIGNUP</h3></Card.Header>
+      <Card.Body className="ms-5">
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="username">User Name: </label>
@@ -72,7 +74,7 @@ function Signup(props) {
           <label htmlFor="email">Email: </label>
           <br></br>
           <input
-            placeholder="youremail@test.com"
+            placeholder="Email"
             name="email"
             type="email"
             id="email"
@@ -91,11 +93,12 @@ function Signup(props) {
           />
         </div>
         <div className="flex-row flex-end">
-          <button type="submit">
+          <button className="btn btn-primary localBtn" type="submit">
             Submit
           </button>
         </div>
       </form>
+
       <br>
       </br>
       <br>
@@ -106,6 +109,10 @@ function Signup(props) {
       </br>
       <br>
       </br>
+
+      </Card.Body>
+      </Card>
+
     </div>
     
   );

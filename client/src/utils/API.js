@@ -12,6 +12,9 @@ const API ={
         return await axios.post("/auth/login", userObj)
         
     },
+    userServices: async (userObj) => {
+        return await axios.post("/auth/service", userObj)
+    }
 
 }
   export default API
