@@ -8,7 +8,7 @@ function About(props) {
         <Card.Header>About Us</Card.Header>
         <Card.Body>
             Sparx lawncare service is here to provide you with expert assistance. We specialize in lawn maintence, tree removal, and snow removal.
-            Schedule your service online or give us a call more info.
+            Schedule your <a href="/servicepage">service online</a> or <a href="/contact">contact</a> us for more info.
         </Card.Body>
       </Card>
     </div>
