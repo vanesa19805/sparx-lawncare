@@ -49,7 +49,7 @@ function LoginForm() {
         </section>
         <section className="mb-3">
           <label for="user-password" className="form-label">
-            Password
+            Password:
           </label>
           <br></br>
           <input
@@ -71,6 +71,14 @@ function LoginForm() {
             Signup
           </Link>
         </section>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
       </form>
     </>
   );
