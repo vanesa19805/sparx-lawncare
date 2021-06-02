@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //import logo from "../assets/lawn-mower-logo.jpg";
-import HomePage from './Homepage';
-import ServicePage from './Servicepage';
+import HomeCard from '../components/HomePage';
+//import ServicePage from './Servicepage';
 import NavBar from "../components/Nav";
 import Apiroutes from "../utils/API";
 
@@ -20,7 +20,7 @@ function onClick(e, title, thumbnail){
 }
 
 
-function Homepage() {
+function ServicePage() {
 
 const [user, setUser]= useState([])
 
