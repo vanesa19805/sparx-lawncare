@@ -27,10 +27,15 @@ class App extends Component {
             <Route exact path="/login" component={LoginForm} />
             <Route exact path="/servicepage" component={Services} />
             <Route exact path="/contact" component={Contact} />
+            
           </Switch>
-          <Footer />
+            <div className="App-footer">
+            <Footer />
+            </div>
         </div>
+       
       </Router>
+      
     );
   }
 }
