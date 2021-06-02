@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //import logo from "../assets/lawn-mower-logo.jpg";
-import HomeCard from '../components/HomePage';
-//import ServicePage from './Servicepage';
+import HomeCard from '../components/HomeCard';
+// import ServicePage from '../components/HomeCard';
 import NavBar from "../components/Nav";
 import Apiroutes from "../utils/API";
 
@@ -18,7 +18,6 @@ function onClick(e, title, thumbnail){
     })
     .catch(err => console.log(err))
 }
-
 
 function ServicePage() {
 

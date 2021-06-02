@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import Homepage from "./pages/Homepage";
 import Services from "./pages/Servicepage";
 import Contact from "./components/Contact";
+import HomeCard from "./components/HomeCard";
 
 class App extends Component {
   render() {
@@ -25,7 +26,7 @@ class App extends Component {
             <Route exact path="/" component={Homepage} />
             <Route exact path="/signup" component={SignupForm} />
             <Route exact path="/login" component={LoginForm} />
-            <Route exact path="/servicepage" component={Services} />
+            <Route exact path="/servicepage" component={HomeCard} />
             <Route exact path="/contact" component={Contact} />
             
           </Switch>
