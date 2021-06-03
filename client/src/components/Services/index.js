@@ -4,6 +4,7 @@ import React from "react";
 function Services(props) {
   return (
     <div>
+      <div className="container-fluid">
       <Card style={{ width: "18rem" }}>
       <Card.Header>Provided Services</Card.Header>
 
@@ -24,6 +25,7 @@ function Services(props) {
           <Card.Link href="#">Another Link</Card.Link>
         </Card.Body>
       </Card>
+      </div>
     </div>
     
   );
