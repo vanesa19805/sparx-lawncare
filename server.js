@@ -4,6 +4,7 @@ const port = process.env.PORT || 3001;
 const session = require("express-session");
 const passport = require("passport");
 const path = require("path");
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlaencare";
 
 app.use(express.urlencoded({ extented: true }));
 app.use(express.json());
@@ -30,6 +31,15 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/sparxlawncare',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  );
 app.use(require("./routes"));
 
 // this allowes you to activate the port
