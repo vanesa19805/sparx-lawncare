@@ -67,10 +67,9 @@ function ServicePage() {
         </Wrapper>
 
           
-        </div>
-        </div>
+        
        
-      </div>
+      
      
 
 
