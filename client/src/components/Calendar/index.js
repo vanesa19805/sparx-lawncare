@@ -1,22 +1,25 @@
 import React from "react";
-import Calendar from 'react-calendar'
+import { InlineWidget} from 'react-calendly'
 
 
-function Calendar(props) {
-
-    const[value, onChange] = useState(new Date());
-
-  return (
-    <div>
-
-      <Calendar 
-      onChange={onChange}
-      value={value}
-      />
-
-    </div>
+class Calendly extends Component {
+  componentDidMount() {
     
-  );
+
+
+  }
+  componentWillUnmount() {
+    
+
+    
+  }
+  render(){
+    return (
+      <div>
+        <InlineWidget url="https://calendly.com/username/15min" />
+      </div>
+    );
+  }
 }
 
-export default Calendar;
+export default Calendly;
