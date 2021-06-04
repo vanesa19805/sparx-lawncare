@@ -53,10 +53,9 @@ function ServicePage() {
             serviceLink={"/Landscaping"}
           />
 
-        </div>
-        </div>
+
        
-      </div>
+      
      
 
 
