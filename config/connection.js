@@ -1,4 +1,12 @@
 const mongoose = require('mongoose');
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlaencare";
 
-
-module.exports= mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/sparxlawncaredb")
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/sparxlawncare',
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  );
