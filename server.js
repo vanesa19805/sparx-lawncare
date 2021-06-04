@@ -30,7 +30,6 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "./client/public/index.html"));
   });
 }
-
 mongoose.connect(
     process.env.MONGODB_URI || 'mongodb://localhost/sparxlawncare',
     {

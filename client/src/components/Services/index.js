@@ -11,8 +11,8 @@ function Services(props) {
             <img src={props.serviceImage} className="card-img-top h-60" alt={props.imageAlt}/>
             <section className="card-body">
               <h5 className="card-title fw-bold fs-5">{props.title}</h5>
-              <p className="card-text">{props.description}</p>
-              <Link to={props.SocialMediaLink} className="btn btn-dark myBtn m-2">Connect on Social Media!</Link>
+              <h3 className="card-text">{props.description}</h3>
+              <Link to={props.instagramLink} className="btn btn-dark myBtn m-2">Connect on Social Media!</Link>
               <Link to={props.serviceLink} className="btn btn-dark myBtn m-2">Go to Services</Link>
             </section>
           </section>

@@ -28,15 +28,20 @@ class App extends Component {
             <Route exact path="/login" component={LoginForm} />
             <Route exact path="/servicepage" component={Services} />
             <Route exact path="/contact" component={Contact} />
-            
+
+            <Route path='/Instagram' component={() => {
+              window.location.href = 'https://www.instagram.com/';
+              return null
+            }} />
+
           </Switch>
-            <div className="App-footer">
+          <div className="App-footer">
             <Footer />
-            </div>
+          </div>
         </div>
-       
+
       </Router>
-      
+
     );
   }
 }
