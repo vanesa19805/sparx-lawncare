@@ -77,7 +77,6 @@ const getUserServices = () => {
           onClick={onClick}
           thumbnail={user.snowplow}
           />
-          
         </div>
         </div>
        
