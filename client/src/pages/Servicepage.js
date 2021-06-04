@@ -53,20 +53,6 @@ function ServicePage() {
             serviceLink={"/Landscaping"}
           />
 
-          <Services
-            serviceImage={plowingImg}
-            imageAlt={"plowing"}
-            title={"Snow-Plowing"}
-            description={"'Winter is the worst!' We hear it all too often. That's why we offer snow removal during the months of December - March for your convenience."}
-            instagramLink={"/Instagram"}
-            serviceLink={"/Snowplowing"}
-          />
-
-
-        </section>
-        </Wrapper>
-
-          
         </div>
         </div>
        
