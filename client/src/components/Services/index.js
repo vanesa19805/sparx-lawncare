@@ -1,6 +1,8 @@
 import React from "react";
 import {Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import ListGroup from 'react-bootstrap/ListGroup';
+
 
 function Services(props) {
   return (
@@ -18,7 +20,7 @@ function Services(props) {
             </section>
           </section>
         </section>  
-      
+
 
     
       <div className="container-fluid">
@@ -33,9 +35,9 @@ function Services(props) {
           </Card.Text>
         
         <ListGroup className="list-group-flush">
-          <ListGroupItem>Cras justo odio</ListGroupItem>
-          <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-          <ListGroupItem>Vestibulum at eros</ListGroupItem>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
         </ListGroup>
        
           <Card.Link href="#">Card Link</Card.Link>
@@ -43,8 +45,11 @@ function Services(props) {
         </Card.Body>
       </Card>
       </div>
+
+ 
     
       </div>
+
 
   );
 }

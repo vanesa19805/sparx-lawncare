@@ -16,7 +16,7 @@ function ServicePage() {
   return (
     <>
     <Wrapper>
-        <section className="row row-cols-1 row-cols-lg-3 g-4 m-4">
+        <div className="row row-cols-1 row-cols-lg-3 g-4 m-4">
 
           <Services
             serviceImage={pavingImg}
@@ -54,8 +54,6 @@ function ServicePage() {
           />
 
 
-       
-      
      
 
 

@@ -4,6 +4,8 @@ const port = process.env.PORT || 3001;
 const session = require("express-session");
 const passport = require("passport");
 const path = require("path");
+const mongoose = require('mongoose')
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlaencare";
 const mongoose = require("mongoose");
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlawncare";
 
