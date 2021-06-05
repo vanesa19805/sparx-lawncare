@@ -5,6 +5,7 @@ import NavBar from "../components/Nav";
 import Apiroutes from "../utils/API";
 import About from "../components/About";
 import Carousel from "../components/Carousel";
+import ServiceCard from "../components/ServiceCard";
 
 
 function onClick(e, title, thumbnail) {
@@ -42,7 +43,8 @@ function Homepage() {
 
     <>
       <About />
-      <Carousel />
+      {/* <Carousel /> */}
+      <ServiceCard />
 
       {/* <div className="container">
         <div className="row row-cols-1 row-cols-md-3 g-3 row-cols-lg-3">

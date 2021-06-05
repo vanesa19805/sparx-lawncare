@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import {Card, ListGroup, ListGroupItem} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import ListGroup from 'react-bootstrap/ListGroup';
 
@@ -8,7 +8,7 @@ function Services(props) {
   return (
 
 
-      <>
+      <div>
         <section className="col">
           <section className="card text-center h-100 localCard lh-base">
             <img src={props.serviceImage} className="card-img-top h-60" alt={props.imageAlt}/>
@@ -20,9 +20,9 @@ function Services(props) {
             </section>
           </section>
         </section>  
-   
 
-    <div>
+
+    
       <div className="container-fluid">
       <Card style={{ width: "18rem" }}>
       <Card.Header>Provided Services</Card.Header>
@@ -45,8 +45,11 @@ function Services(props) {
         </Card.Body>
       </Card>
       </div>
-    </div>
-    </>
+
+ 
+    
+      </div>
+
 
   );
 }
