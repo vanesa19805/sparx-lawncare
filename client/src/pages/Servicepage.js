@@ -55,7 +55,7 @@ function ServicePage() {
             serviceLink={"/Landscaping"}
           />
 
-              <Services
+            <Services
             serviceImage={plowingImg}
             imageAlt={"plowing"}
             title={"Snow Plowing"}
@@ -66,6 +66,7 @@ function ServicePage() {
         </Wrapper>
         </>
     )
+
 
 
 
