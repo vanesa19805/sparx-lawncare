@@ -14,6 +14,9 @@ const API ={
     },
     userServices: async (userObj) => {
         return await axios.post("/auth/service", userObj)
+    },
+    getUser: async (userObj) => {
+        return await axios.get("/auth/user")
     }
 
 }
