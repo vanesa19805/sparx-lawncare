@@ -1,7 +1,7 @@
 import React from "react";
-import {Card, ListGroup, ListGroupItem} from "react-bootstrap";
+import {Card, ListGroup } from "react-bootstrap";
 import {Link} from "react-router-dom";
-import ListGroup from 'react-bootstrap/ListGroup';
+//import ListGroup from 'react-bootstrap/ListGroup';
 
 
 function Services(props) {
@@ -23,7 +23,7 @@ function Services(props) {
 
 
     
-      <div className="container-fluid">
+       {/*</div><div className="container-fluid">
       <Card style={{ width: "18rem" }}>
       <Card.Header>Provided Services</Card.Header>
 
@@ -42,9 +42,10 @@ function Services(props) {
        
           <Card.Link href="#">Card Link</Card.Link>
           <Card.Link href="#">Another Link</Card.Link>
-        </Card.Body>
+          
+        </Card.Body> 
       </Card>
-      </div>
+      </div>*/}
 
  
     
