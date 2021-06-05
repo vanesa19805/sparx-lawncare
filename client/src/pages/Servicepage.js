@@ -15,7 +15,7 @@ import plowingImg from "../assets/plowing.jpg";
 function ServicePage() {
   return (
     <>
-    <Wrapper>
+      <Wrapper>
         <section className="row row-cols-1 row-cols-lg-3 g-4 m-4">
 
           <Services
@@ -52,16 +52,16 @@ function ServicePage() {
             instagramLink={"/Instagram"}
             serviceLink={"/Landscaping"}
           />
-
-        </div>
-        </div>
-       
-      </div>
-     
-
-
-    </>
-  )
+              <Services
+            serviceImage={plowingImg}
+            imageAlt={"plowing"}
+            title={"Snow Plowing"}
+            description={"Winter is the worst!' We hear it all too often. That's why we offer snow removal during the months of December - March for your convenience."}
+            serviceLink={"/Plowing"}
+          />
+</section>
+        </Wrapper>
+        </>
+    )
 }
-
 export default ServicePage;
