@@ -22,6 +22,7 @@ function Services(props) {
         </section>  
 
 
+
     
       <div className="container-fluid">
       <Card style={{ width: "18rem" }}>
@@ -51,9 +52,9 @@ function Services(props) {
       </div>
 
 
-  );
-}
+
     // <div>
+    //   <div className="container-fluid">
     //   <Card style={{ width: "18rem" }}>
     //   <Card.Header>Provided Services</Card.Header>
 
@@ -74,6 +75,10 @@ function Services(props) {
     //       <Card.Link href="#">Another Link</Card.Link>
     //     </Card.Body>
     //   </Card>
+    //   </div>
     // </div>
-
+    
+  );
+}
+ 
 export default Services;
