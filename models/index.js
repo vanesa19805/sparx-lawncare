@@ -1,4 +1,5 @@
 module.exports= {
     User: require("./User"),
-    AptForm: require("./event")
+    Event: require("./event"),
+    Service: require("./serviceaddress")
 }

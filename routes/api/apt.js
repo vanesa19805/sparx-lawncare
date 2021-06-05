@@ -1,6 +1,7 @@
 const router = require ("express").Router();
-// const mongojs =require("mongoose");
+const mongoose =require("mongoose");
 const path =require("path");
+const { brotliDecompress } = require("zlib");
 
 
 const db = require("../../models");
@@ -8,8 +9,10 @@ const db = require("../../models");
 
 // how do i structure this?
 
-router.post("/api/aptform", ({ body }, res) => {
-  db.Aptform.create(body)
+router.post("/aptform", ({ body ,user}, res) => {
+  console.log(user)
+  body.userId= mongoose.Types.ObjectId(user._id) 
+  db.Event.create(body)
       .then(dbAptform => {
         res.json(dbAptform);
       })
@@ -17,16 +20,8 @@ router.post("/api/aptform", ({ body }, res) => {
         res.status(400).json(err);
       });
   });
-  router.post("/api/aptform", ({ body }, res) => {
-    Aptform.findOne(body)
-      .then(dbAptform => {
-        res.json(dbAptform);
-      })
-      .catch(err => {
-        res.status(400).json(err);
-      });
-  });
-  router.put("/api/aptform", ({body}, res) => {
+
+  router.put("/aptform", ({body}, res) => {
     console.log(body)
     Workout.findByIdAndUpdate(
         req.params.id,

@@ -6,8 +6,8 @@ const passport = require("passport");
 const path = require("path");
 const mongoose = require('mongoose')
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlaencare";
-const mongoose = require("mongoose");
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlawncare";
+// const mongoose = require("mongoose");
+// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlawncare";
 
 app.use(express.urlencoded({ extented: true }));
 app.use(express.json());

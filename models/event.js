@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const aptformSchema = new Schema({
+const EventSchema = new Schema({
   location: {
     type: String,
     trim: true,
@@ -18,7 +18,7 @@ const aptformSchema = new Schema({
     trim: true
   },
   time:{
-    type: Number,
+    type: String,
     required: true
   },
   day:{
@@ -28,10 +28,14 @@ const aptformSchema = new Schema({
   note:{
       type: String,
       trim: true
+  },
+  userId:{
+    type : Schema.Types.ObjectId,
+    ref: "User"
   }
 
 });
 
-const Aptform = mongoose.model("Aptform", aptformSchema);
+const Event = mongoose.model("event", EventSchema);
 
-module.exports = Aptform;
+module.exports = Event;
