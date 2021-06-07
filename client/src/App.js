@@ -12,10 +12,23 @@ import Homepage from "./pages/Homepage";
 import Services from "./pages/Servicepage";
 import Contact from "./components/Contact";
 import HomeCard from "./components/HomeCard";
+import socketClient  from "socket.io-client";
+
+
+
 
 class App extends Component {
+  
   render() {
+    
+    const SERVER = "http://127.0.0.1:8080";
+    const socket = socketClient(SERVER);
+    socket.on('connection', () => {
+      console.log(`I'm connected with the back-end`);
+    });
+
     return (
+      
       <Router>
         <div className="App">
           <Header />

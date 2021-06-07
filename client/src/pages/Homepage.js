@@ -42,6 +42,7 @@ function Homepage() {
   return (
 
     <>
+      <h1> I am in the HOMEPAGE COMPONENT</h1>
       <About />
       {/* <Carousel /> */}
       <ServiceCard />
