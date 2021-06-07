@@ -35,9 +35,6 @@ router.post("/aptform", ({ body ,user}, res) => {
         })
 });
   
+module.exports = router;
 
 
-
-
-  
-module.exports = router 
