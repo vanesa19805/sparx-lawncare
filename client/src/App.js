@@ -12,9 +12,15 @@ import Homepage from "./pages/Homepage";
 import Services from "./pages/Servicepage";
 import Contact from "./components/Contact";
 import HomeCard from "./components/HomeCard";
+//import Calendar from "react-calendar";
 
-class App extends Component {
-  render() {
+
+
+
+
+
+ class App extends Component {
+  render() { 
     return (
       <Router>
         <div className="App">
@@ -28,6 +34,7 @@ class App extends Component {
             <Route exact path="/login" component={LoginForm} />
             <Route exact path="/servicepage" component={Services} />
             <Route exact path="/contact" component={Contact} />
+          
 
             <Route path='/Instagram' component={() => {
               window.location.href = 'https://www.instagram.com/';
