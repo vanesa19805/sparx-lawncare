@@ -26,7 +26,7 @@ function ServicePage() {
             imageAlt={"paving"}
             title={"Pavers Work"}
             description={"Make Your Outdoor Living Dream A Reality! A permeable paver system can even be designed to harvest and recycle rainwater."}
-            instagramLink={"/Instagram"}
+            facebookLink={"/Facebook"}
             serviceLink={"/service_sch"}
             service='paving'
           />
@@ -36,7 +36,7 @@ function ServicePage() {
             imageAlt={"firepit"}
             title={"Hardscape"}
             description={"Our associates are qualified to install, craft & construct a multitude of Hardscaping aesthetics for your pleasure or convenience."}
-            instagramLink={"/Instagram"}
+            facebookLink={"/Facebook"}
             serviceLink={"/service_sch"}
             service='Hardscape'
           />
@@ -46,7 +46,7 @@ function ServicePage() {
             imageAlt={"mowing"}
             title={"Lawn Care"}
             description={"Our Agronomists Tailor Plans & Formulas Specifically For your Location and Grass Type!"}
-            instagramLink={"/Instagram"}
+            facebookLink={"/Facebook"}
             serviceLink={"/service_sch"}
             service='Lawn Care'
           />
@@ -55,7 +55,7 @@ function ServicePage() {
             imageAlt={"landsaping"}
             title={"Landscape"}
             description={"Your lawn is your pride, therefore it's ours. Our associates are trained to cut & treat your lawn to the highest quality standards available."}
-            instagramLink={"/Instagram"}
+            facebookLink={"/Facebook"}
             serviceLink={"/service_sch"}
             service='Landscaping'
           />
@@ -65,6 +65,7 @@ function ServicePage() {
             imageAlt={"plowing"}
             title={"Snow Plowing"}
             description={"Winter is the worst!' We hear it all too often. That's why we offer snow removal during the months of December - March for your convenience."}
+            facebookLink={".Facebook"}
             serviceLink={"/service_sch"}
             service='Plowing'
           />

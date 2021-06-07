@@ -38,8 +38,8 @@ import Schedule from "./components/Schedule";
             <Route exact path="/service_sch" component={Schedule} />
           
 
-            <Route path='/Instagram' component={() => {
-              window.location.href = 'https://www.instagram.com/';
+            <Route path='/Facebook' component={() => {
+              window.location.href = 'https://www.facebook.com/Sparx-lawn-service-107059844915153/?ref=pages_you_manage';
               return null
             }} />
 
