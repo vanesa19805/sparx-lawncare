@@ -13,6 +13,7 @@ import Services from "./pages/Servicepage";
 import Contact from "./components/Contact";
 import HomeCard from "./components/HomeCard";
 //import Calendar from "react-calendar";
+import Schedule from "./components/Schedule";
 
 
 
@@ -34,6 +35,7 @@ import HomeCard from "./components/HomeCard";
             <Route exact path="/login" component={LoginForm} />
             <Route exact path="/servicepage" component={Services} />
             <Route exact path="/contact" component={Contact} />
+            <Route exact path="/service_sch" component={Schedule} />
           
 
             <Route path='/Instagram' component={() => {
