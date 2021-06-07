@@ -5,9 +5,7 @@ const session = require("express-session");
 const passport = require("passport");
 const path = require("path");
 const mongoose = require('mongoose')
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlawncare";
-// const mongoose = require("mongoose");
-// const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sparxlawncare";
+ 
 
 app.use(express.urlencoded({ extented: true }));
 app.use(express.json());
@@ -24,26 +22,26 @@ app.use(
 // Passport init
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(require("./routes"));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-  routes;
+  app.use(express.static("./client/build"));
+  
 
   app.get("*", function (req, res) {
     res.sendFile(path.join(__dirname, "./client/public/index.html"));
   });
 }
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/evening-meadow-40236',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  }
-);
+    process.env.MONGODB_URI ||  "mongodb://localhost/sparxlawncare",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false
+    }
+  );
 
-app.use(require("./routes"));
 
 // this allowes you to activate the port
 require("./config/connection");
