@@ -1,4 +1,9 @@
 import React from "react";
+// // import React, { useState } from "react";
+// import { render } from "react-dom";
+// import Calendar from 'react-calendar';
+// import Calendar from "../components/Calendar";
+
 import {Card, ListGroup } from "react-bootstrap";
 import {Link} from "react-router-dom";
 //import ListGroup from 'react-bootstrap/ListGroup';
@@ -6,7 +11,6 @@ import {Link} from "react-router-dom";
 
 function Services(props) {
   return (
-
 
       <div>
         <section className="col">
