@@ -19,7 +19,7 @@ function Services(props) {
             <section className="card-body">
               <h5 className="card-title fw-bold fs-5">{props.title}</h5>
               <h3 className="card-text">{props.description}</h3>
-              <Link to={props.instagramLink} className="btn btn-dark myBtn m-2">Connect on Social Media!</Link>
+              <Link to={props.facebookLink} className="btn btn-dark myBtn m-2">Connect on Social Media!</Link>
               <Link to={{pathname: props.serviceLink, state: {service: props.service}}}  className="btn btn-dark myBtn m-2">Go to Services</Link>
             </section>
           </section>
