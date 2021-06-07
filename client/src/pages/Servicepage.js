@@ -10,6 +10,7 @@ import firepitImg from "../assets/firepit.jpg";
 import mowingImg from "../assets/mowing.jpg";
 import landscapingImg from "../assets/landscaping.jpg";
 import plowingImg from "../assets/plowing.jpg";
+//import Calendar from "./components/Calendar";
 
 
 function ServicePage() {

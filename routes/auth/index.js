@@ -7,7 +7,7 @@ const passport= require("passport")
 passport.use(new LocalStrategy(
   function(username, password, done) {
 
-console.log('YOOO')
+console.log('log in sucessfull')
 
     User.getUserByUsername(username, function(err, user){
       if(err) throw err;
