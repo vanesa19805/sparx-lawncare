@@ -1,8 +1,5 @@
 import React from "react";
 import Cards from 'react-credit-cards';
-
-
-
 export default class PaymentForm extends React.Component {
     state = {
       cvc: '',

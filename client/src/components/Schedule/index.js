@@ -1,15 +1,13 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import ListGroup from "react-bootstrap/ListGroup";
-import ListGroupItem from "react-bootstrap/ListGroupItem";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import Calendly from "../Calendar"
+// import "./style.css";
+// import Payment from "./components/Payment"
+// import Calendly from "../Calendar"
 import {  useHistory } from "react-router-dom";
-
-
 
 function Schedule(props) {
 
@@ -63,7 +61,7 @@ function Schedule(props) {
             </Form>
           </Card>
         </div>
-          <div className="col-10 mx-auto p-5">
+          <div className="col-10 mx-auto p-5 dark">
               <Card>
                   <Card.Header className="text-center">Contact Us</Card.Header>
                   <Card.Body className="text-center">
