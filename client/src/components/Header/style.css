@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
 
 .heading {
-    background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.6)
-    );
-    padding: 50px;
-    background-image: url("../../assets/headerBackground.jpg");
-    background-size: cover;  
+    background: #c8f1bd; 
+     padding: 30px;
+    /* background-image: url("../../assets/headerBackground.jpg"); */
+    background-size: auto;  
     text-shadow:
         0.07em 0 black,
         0 0.07em black,
@@ -16,12 +12,12 @@
         0 -0.07em black;
 }
 #appname {
-    color: white;    
+    color: rgb(22, 19, 19);    
     font-family: 'Racing Sans One', cursive;  
     font-size: 50px;      
 }
 
 p {
-    color: white;
+    color: rgb(12, 11, 11);
     font-weight: bolder;
 }
