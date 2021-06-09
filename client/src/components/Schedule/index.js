@@ -34,7 +34,7 @@ function Schedule(props) {
 
   return (
     <div>
-      <h3 className="text-center mt-5">{props.location.state.service}</h3>
+      <h3 className="text-center mt-5 fw-bolder" >{props.location.state.service}</h3>
       {/* <div className={"calendar"}>
         <Card>
             <Card.Header className="text-center">Schedule your free estimate</Card.Header>
@@ -43,9 +43,9 @@ function Schedule(props) {
             </Card.Body>
         </Card>
         </div> */}
-      <div className="col-10 mx-auto p-5">
+      <div className="col-10 mx-auto p-5 fs-5 fw-bold">
         <Card>
-          <Card.Header className="text-center">Send us a message</Card.Header>
+          <Card.Header className="text-center fs-5 fw-bold">Send us a message</Card.Header>
           <Form className="p-3" onSubmit={handleFormSubmit}>
             <Row className="mb-3">
               <Form.Label>Name</Form.Label>
@@ -82,9 +82,9 @@ function Schedule(props) {
           </Form>
         </Card>
       </div>
-      <div className="col-10 mx-auto p-5 dark">
+      <div className="col-10 mx-auto p-5 fs-5 fw-bold ">
         <Card>
-          <Card.Header className="text-center">Contact Us</Card.Header>
+          <Card.Header className="text-center fs-5 fw-bold">Contact Us</Card.Header>
           <Card.Body className="text-center">
             To reach out to us about a job or an issue, please
             <a

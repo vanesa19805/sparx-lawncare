@@ -7,7 +7,7 @@ function Login() {
   return (
     <>
       <LoginWrapper>
-        <section className="col-10 mx-auto justify-content-center text-center col-lg-5">
+        <section className="col-10 mx-auto justify-content-center text-center col-lg-5 fs-5 fw-bold">
           <img
             src={logo}
             className="img-fluid"
