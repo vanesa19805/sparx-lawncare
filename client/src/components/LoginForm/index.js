@@ -18,7 +18,8 @@ function LoginForm() {
     console.log(obj);
     Api.loginUser(obj).then((res) => {
       console.log(res);
-      history.push("/user-home");
+      localStorage.setItem('token', res.data.token);
+      history.push("/servicepage");
     });
   };
 
