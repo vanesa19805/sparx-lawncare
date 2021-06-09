@@ -1,7 +1,8 @@
 const router= require("express").Router()
 const {User} = require("../../models")
 var LocalStrategy = require('passport-local').Strategy;
-const passport= require("passport")
+const passport= require("passport");
+const {authMiddleware, signToken} = require('../../utils/auth');
 
 
 passport.use(new LocalStrategy(
@@ -64,14 +65,22 @@ router.post('/register', function(req, res){
   // Endpoint to login
 router.post('/login',passport.authenticate('local'),function(req, res) {
   console.log('login successful');
-  res.send(req.user);
+  const token = signToken(req.user);
+  console.log(token);
+  res.json({token});
 }
 );
 
 // Endpoint to get current user
-router.get('/user', function(req, res){
-res.send(req.user);
+router.get('/user', authMiddleware, function(req, res){   
+res.send({user: req.user, message: "Valid token!", loggedIn: true});
 })
+
+router.get('/me',
+  passport.authenticate('local', { session: false }),
+  function(req, res) {
+    res.json({ username: req.user.username });
+  });
 
 
 // Endpoint to logout

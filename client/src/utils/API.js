@@ -16,7 +16,15 @@ const API ={
         return await axios.post("/auth/service", userObj)
     },
     getUser: async (userObj) => {
-        return await axios.get("/auth/user")
+        const token = localStorage.getItem('token') || 0;
+        return await axios.get('/auth/user', {
+            headers: {
+            'Authorization': `Basic ${token}` 
+          }
+        })
+    },
+    logout: async (userObj) => {
+        return await axios.post("api/auth/logout")
     }
 
 }
