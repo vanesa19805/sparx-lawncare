@@ -5,7 +5,7 @@ import Image3 from "../../assets/plowing.jpg";
 
 function ServiceCard(props) {
   return (
-    <div className="bg-light m-5">
+    <div className="bg-light m-5 fs-5 fw-bold">
         <h2 className="text-center pt-3">Some of Our Services</h2>
       <div className="row row-cols-1 row-cols-md-3 m-5">
         <div className="col">

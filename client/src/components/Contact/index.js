@@ -11,16 +11,17 @@ function Contact(props) {
   return (
     <div>
       <div className={"calendar"}>
-        <Card>
-          <Card.Header className="text-center">
+        <Card style={{ color: 'darkgreen' }}>
+          <Card.Header className="text-center fs-10 fw-bolder">
             Schedule your free estimate
           </Card.Header>
-          <Card.Body className="text-center">
+          <Card.Body className="text-center fs-5 fw-bold">
             <Calendly />
           </Card.Body>
         </Card>
+
       </div>
-      <div className="col-10 mx-auto p-5">
+      <div className="col-10 mx-auto p-5 fs-5 fw-bold">
         <Card>
           <Card.Header className="text-center">Send us a message</Card.Header>
           <Form className="p-3">
@@ -51,9 +52,9 @@ function Contact(props) {
           </Form>
         </Card>
       </div>
-      <div className="col-10 mx-auto p-5">
+      <div className="col-10 mx-auto p-5 fs-5 fw-bold">
         <Card>
-          <Card.Header className="text-center">Contact Us</Card.Header>
+          <Card.Header className="text-center fs-5 fw-bold">Contact Us</Card.Header>
           <Card.Body className="text-center">
             To reach out to us about a job or an issue, please
             <a

@@ -39,12 +39,12 @@ function Signup(props) {
   };
 
   return (
-    <div className="col-6 mx-auto p-5">
+    <div className="col-6 mx-auto p-5 fs-5 fw-bold">
       <Link to="/login">
         ← Go to Login
       </Link>
     <Card className="mt-3">
-      <Card.Header><h3 className="text-center">SIGNUP</h3></Card.Header>
+      <Card.Header><h3 className="text-center fs-5 fw-bold">SIGNUP</h3></Card.Header>
       <Card.Body className="ms-5">
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">

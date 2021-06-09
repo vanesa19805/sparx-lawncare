@@ -4,7 +4,7 @@ function About(props) {
   return (
     <div className="text-center mt-5">
       <div class="card-body">
-        <h4 class="card-title">
+        <h4 class="card-title fs-5 fw-bold">
           Let us Make Your Home Standout With a Well-Maintained Landscape
         </h4>
         <p class="card-text">
